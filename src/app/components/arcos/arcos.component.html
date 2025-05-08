@@ -1,0 +1,26 @@
+<section id="arcos" class="my-5">
+  <h1 class="text-center mb-4">Arcos Argumentales</h1>
+  
+  <div class="arcos-container">
+    <div class="accordion-item">
+      <button class="accordion-button"
+              (click)="toggleAccordion()"
+              [attr.aria-expanded]="isAccordionOpen">
+        Leer Arcos Argumentales
+      </button>
+      
+      <div class="accordion-content" [class.open]="isAccordionOpen">
+        <div class="lista-arcos">
+          <div class="list-group">
+            <a *ngFor="let arco of arcos"
+               [href]="arco.link"
+               target="_blank"
+               class="list-group-item list-group-item-action">
+              {{ arco.title }} ({{ arco.issues }})
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,1 +1,331 @@
-/* You can add global styles to this file, and also import other style files */
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    background: url('https://images2.alphacoders.com/133/1337352.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    padding-top: 70px;
+  }
+  
+  /* Navbar */
+  .navbar-brand {
+    font-family: 'Bangers', sans-serif;
+    font-size: 1.8rem;
+  }
+  
+  .navbar {
+    border-bottom: 2px solid #ffc107;
+  }
+  
+  form.d-flex {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  input.form-control {
+    border-radius: 15px;
+  }
+  
+  button.btn-warning {
+    border-radius: 15px;
+  }
+  
+  /* Resumen bajo el encabezado */
+  #resumen {
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1rem;
+    text-align: justify;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Títulos de las secciones */
+  h1 {
+    font-family: 'Bangers', sans-serif;
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Tarjetas */
+  .card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  }
+  
+  .card img {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+  }
+  
+  .card-body {
+    text-align: center;
+  }
+  
+  .card-title {
+    font-family: 'Bangers', sans-serif;
+    font-size: 1.5rem;
+    color: hwb(0 0% 100%);
+  }
+  
+  .card-text {
+    font-size: 0.9rem;
+    color: #333;
+  }
+  
+  /* Expandir tarjetas individualmente */
+  details {
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  
+  details[open] {
+    max-height: 300px;
+  }
+  
+  .card details summary {
+    cursor: pointer;
+    font-size: 0.95rem;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+  }
+  
+  details[open] summary {
+    background-color: #ffc107;
+    color: #333;
+  }
+  
+  details p {
+    margin-top: 10px;
+    font-size: 0.9rem;
+  }
+  
+  /* Listas de arcos argumentales */
+  .list-group-item {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #ffc107;
+    font-size: 1rem;
+    border: 1px solid #ffc107;
+    border-radius: 5px;
+  }
+  
+  .list-group-item:hover {
+    background-color: #ffc107;
+    color: #333;
+  }
+  
+  /* Formulario de contacto */
+  form {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  form label {
+    font-weight: bold;
+  }
+  
+  form .btn {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  /* Footer */
+  footer {
+    background: rgba(0, 0, 0, 0.8);
+    font-size: 0.85rem;
+    text-align: center;
+    padding: 15px;
+    border-top: 2px solid #ffc107;
+  }
+  
+  /* Ajuste del margen superior de las secciones */
+  #heroes, #villanos, #viltrumitas, #arcos {
+    margin-top: 30px;
+  }
+  
+  /* Espaciado adicional entre las filas de las tarjetas */
+  .row-cols-md-2 .col {
+    margin-top: 10px;
+  }
+  
+  /* Centrar las tarjetas */
+  .card {
+    margin: 0 auto;
+    max-width: 90%;
+  }
+  
+  .row {
+    justify-content: center;
+  }
+  
+  /* Estilo del botón flotante */
+  .scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #ffc107;
+    color: #333;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    display: none; /* Por defecto, está oculto */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  .scroll-to-top:hover {
+    background-color: #ff9800;
+    transform: scale(1.1);
+  }
+  
+  .scroll-to-top:active {
+    transform: scale(0.95);
+  }
+  
+  /* Animación para resaltar la tarjeta */
+  @keyframes highlight {
+    0% {
+      border: 3px solid rgba(255, 193, 7, 0.7);
+      transform: scale(1);
+    }
+    50% {
+      border: 3px solid rgba(255, 193, 7, 1);
+      transform: scale(1.05);
+    }
+    100% {
+      border: 3px solid rgba(255, 193, 7, 0.7);
+      transform: scale(1);
+    }
+  }
+  
+  .highlight-card {
+    animation: highlight 3s ease-in-out;
+  }
+  
+  /* Estilo para el contenedor de autocompletado */
+  .autocomplete-items {
+    position: absolute;
+    z-index: 99;
+    top: 100%;
+    right: 0;  
+    border: 1px solid #d4d4d4;
+    border-top: none;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    width: 29%; 
+    max-width: 550px; 
+    margin-right: 20px; 
+  }
+  
+  /* Estilo para los elementos de la lista */
+  .autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    color: black; /* Cambiar color de texto a negro */
+  }
+  
+  /* Resaltar el item cuando se pasa por encima */
+  .autocomplete-items div:hover {
+    background-color: #ddd;
+  }
+  
+  /* Estilos para los badges */
+  .badge {
+    font-size: 1rem;
+    padding: 5px 10px;
+    border-radius: 12px;
+    margin-right: 10px; /* Espacio entre los badges */
+    display: inline-block;
+    text-transform: capitalize;
+    font-weight: bold;
+  }
+  
+  
+  /* Estilo para los Badges */
+  .badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin-right: 8px;
+    margin-bottom: 5px;
+    text-align: center;
+    color: #fff;
+    animation: badgeAnimation 3s infinite alternate; 
+    cursor: pointer;
+  }
+  
+  /* Colores para los badges */
+  .badge.hero {
+    background-color: #007bff; /* Azul para héroes */
+  }
+  
+  .badge.villano {
+    background-color: #dc3545; /* Rojo para villanos */
+  }
+  
+  .badge.viltrumita {
+    background-color: #28a745; /* Verde para viltrumitas*/
+  }
+  
+  @keyframes badgeAnimation {
+    0% {
+      transform: scale(1) translateY(0);
+      opacity: 0.8;
+    }
+    50% {
+      transform: scale(1.2) translateY(-10px); 
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1) translateY(0);
+      opacity: 0.8;
+    }
+  }
+  
+  /* Estilo general para la imagen voladora */
+  .fly-image {
+    position: absolute;
+    top: 10%; 
+    left: -150px; 
+    width: 80px; 
+    height: auto; 
+    transform: scale(1.5); 
+    animation: flying 10s linear infinite; 
+    z-index: 1000; 
+  }
+  
+  /* Animación de vuelo */
+  @keyframes flying {
+    0% {
+        left: -150px; 
+    }
+    100% {
+        left: 100%;
+    }
+  }
+
+ 

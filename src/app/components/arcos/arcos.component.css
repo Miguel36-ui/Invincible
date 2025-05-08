@@ -1,0 +1,55 @@
+/* Contenedor principal */
+.arcos-container {
+    max-width: 800px; /* Ajusta este valor según necesites */
+    margin: 0 auto; /* Centra horizontalmente */
+    width: 90%; /* Para responsiveness */
+  }
+  
+  /* Acordeón */
+  .accordion-item {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+  }
+  
+  /* Botón */
+  .accordion-button {
+    width: 100%;
+    padding: 1.25rem;
+    font-size: 1.25rem;
+    text-align: left;
+    background-color: #343a40;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  /* Contenido desplegable */
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+    background-color: #f8f9fa;
+  }
+  
+  .accordion-content.open {
+    max-height: 1500px; /* Ajusta según tu contenido máximo */
+  }
+  
+  /* Lista de arcos */
+  .lista-arcos {
+    padding: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .arcos-container {
+      width: 95%;
+    }
+    
+    .accordion-button {
+      padding: 1rem;
+      font-size: 1.1rem;
+    }
+  }
