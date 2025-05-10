@@ -1,6 +1,6 @@
 /* Contenedor principal */
 .arcos-container {
-    max-width: 800px; /* Ajusta este valor según necesites */
+    max-width: 800px; 
     margin: 0 auto; /* Centra horizontalmente */
     width: 90%; /* Para responsiveness */
   }
