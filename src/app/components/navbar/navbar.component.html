@@ -1,0 +1,57 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <!-- Logo -->
+    <a class="navbar-brand" href="#" style="margin-left: 50px;">
+      <img src="https://image.tmdb.org/t/p/original/8MD7BNgU0X21GewTZk8zVd9Awi9.png" alt="Invincible Logo" style="height: 50px;">
+    </a>
+    
+    <header>
+      <img src="https://preview.redd.it/1mhcf65kin271.png?width=640&crop=smart&auto=webp&s=0fab30084927c47dc085c782b873347fe31feb9f"
+           alt="Invincible volando" class="fly-image">
+    </header>
+
+    <!-- Botón móvil -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Contenido del navbar -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link" href="#heroes">Héroes destacados</a></li>
+        <li class="nav-item"><a class="nav-link" href="#villanos">Villanos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#viltrumitas">Viltrumitas</a></li>
+        <li class="nav-item"><a class="nav-link" href="#arcos">Arcos Argumentales</a></li>
+      </ul>
+
+      <!-- BUSCADOR MEJORADO -->
+      <div class="d-flex position-relative">
+        <form class="d-flex" (submit)="onSearchSubmit(); $event.preventDefault()">
+          <input #searchInput
+                [(ngModel)]="searchQuery"
+                (input)="onSearchInput()"
+                (focus)="onSearchInput()"
+                (blur)="hideSuggestions()"
+                name="searchQuery"
+                class="form-control me-2"
+                type="search"
+                placeholder="Buscar personaje..."
+                aria-label="Search"
+                autocomplete="off">
+          <button class="btn btn-warning" type="submit">Buscar</button>
+        </form>
+
+        <!-- SUGERENCIAS -->
+        <div *ngIf="showSuggestions" class="autocomplete-suggestions">
+          <div *ngFor="let option of filteredOptions"
+              class="suggestion-item"
+              (mousedown)="selectSuggestion(option)">
+            {{ option }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
